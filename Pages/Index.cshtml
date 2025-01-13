@@ -1,10 +1,25 @@
 ﻿@page
-@model IndexModel
+@using Microsoft.AspNetCore.Mvc.TagHelpers
+@model WebApplication1Razor.Model.LoginModel
 @{
     ViewData["Title"] = "Home page";
 }
+<div class="align-content-center padding ">
+    <div class="text-left" style="width: 50%" >
+        <form asp-page="Index" method="post">
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+            <div class="mb-3">
+                <label asp-for="Username" class="form-label">账号</label>
+                <input asp-for="Username" type="text" class="form-control" placeholder="请输入账号">
+                <span asp-validation-for="Username" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="Password" class="form-label">密码</label>
+                <input asp-for="Password" type="password" class="form-control" placeholder="请输入密码">
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+            <a asp-action="Register" asp-controller="Home">还没有账号？前去注册</a>
+            <button type="submit" class="btn btn-primary">登录</button>
+        </form>
+    </div>
 </div>
