@@ -14,6 +14,22 @@ public class IndexModel : PageModel
 
     public void OnGet()
     {
+        Console.WriteLine("get");
     }
-    
+
+    public IActionResult OnPost()
+    {
+        Console.WriteLine("post");
+        return RedirectToPage("Error");
+    }
+
+    public IActionResult OnPostLogin()
+    {
+        Console.WriteLine("这是新学的login");
+        return RedirectToPage("Register");
+    }
+    public void OnPostTest()
+    {
+        Console.WriteLine("TestTestTestTest");
+    }
 }

@@ -14,5 +14,20 @@ public class PrivacyModel : PageModel
 
     public void OnGet()
     {
+        Console.WriteLine("ss");
+         
     }
+
+    public void OnPostTest()
+    {
+        Console.WriteLine("TestFinnian");
+         
+    }
+    // public async Task<IActionResult> OnPostAsync()
+    // {
+    //     Console.WriteLine("OnPostAsync");
+    //     return RedirectToPage("/Index");
+    // }
+
+    
 }
